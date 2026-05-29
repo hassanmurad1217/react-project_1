@@ -1,0 +1,131 @@
+/* Todo.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(to right, #001c29, #002b3d, #001c29);
+  min-height: 100vh;
+}
+
+/* Main Container */
+.todo-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 6rem;
+}
+
+/* Heading */
+.todo-container h1 {
+  color: white;
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+/* Form Section */
+.form form {
+  display: flex;
+  align-items: center;
+}
+
+/* Input Field */
+.todo-input {
+  width: 28rem;
+  height: 3.5rem;
+  border: none;
+  outline: none;
+  padding: 0 1rem;
+  font-size: 1.1rem;
+  border-radius: 12px 0 0 12px;
+  background-color: #f1f1f1;
+}
+
+/* Button */
+.todo-btn {
+  height: 3.5rem;
+  padding: 0 1.8rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 0 12px 12px 0;
+  background-color: #79b8f3;
+  color: white;
+  transition: 0.3s ease;
+}
+
+/* Hover Effect */
+.todo-btn:hover {
+  background-color: #5aa7ee;
+}
+.todo-item {
+  margin: 2.4rem;
+  /*word-wrap: break-word;
+      flex-wrap: wrap;
+      */
+  font-size: 20px;
+  color: #1c2833;
+  border-radius: 30px;
+  transition: background-color 200ms ease-in-out;
+  background-color: #f2f3f4;
+  min-width: 35rem;
+  max-width: 40rem;
+  padding: 1.6rem 3rem;
+  display: grid;
+  grid-template-columns: 1fr 0.3fr 0.3fr;
+  justify-content: start;
+  gap: 1.6rem;
+  align-items: center;
+  /*wrapsthelinks*/
+  overflow-wrap: anywhere;
+}
+.check-btn,
+.delete-btn {
+  width: 3.2rem;
+  height: 3.2rem;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* check button */
+.check-btn {
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  color: white;
+}
+
+.check-btn:hover {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+/* delete button */
+.delete-btn {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  color: white;
+}
+
+.delete-btn:hover {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+/* icon alignment fix */
+.check-btn svg,
+.delete-btn svg {
+  pointer-events: none;
+}

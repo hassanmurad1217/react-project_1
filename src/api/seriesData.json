@@ -1,0 +1,52 @@
+[
+    {
+        "name" : "Queen of Tears",
+        "id" : "queenOftears",
+        "img_url" : "/got.AVIF",
+        "rating" : "8.9",
+        "description" : "Queen of Tears is a romantic Korean drama about a struggling married couple rediscovering love while facing family pressure, heartbreak, misunderstandings, sacrifice, and emotional challenges together.",
+        "cast" : ["Kim Soo-hyun" , " Kim Ji-won"],
+        "genere" : ["Romance", "Comeady" , "Drama"],
+        "watch_url" : "https://www.imdb.com/title/tt27668559/"
+    },
+    {
+        "name" : "Lovely Runner",
+        "id" : "lovelyRunner",
+        "img_url" : "/Lovely_runner.jpeg",
+        "rating" : "8.5",
+        "description" : "Lovely Runner is a romantic Korean drama about a young woman who falls in love with a man who is a runner. The series combines romance, comedy, and emotional moments with strong performances, beautiful visuals, and heartfelt storytelling.",
+        "cast" : ["Kim Soo-hyun" , " Kim Ji-won"],
+        "genere" : ["Romance", "Comedy" , "Drama"],
+        "watch_url" : "https://www.viki.com/tv/40466c-lovely-runner#episodes"
+    },
+    {
+        "name" : "Phantom Lawyer",
+        "id" : "phantomLawyer",
+        "img_url" : "/phantom_lawyer.webp",
+        "rating" : "8.0",
+        "description" : "Phantom Lawyer is a legal drama about a lawyer who uses his skills to help the poor and the wronged. The series combines legal drama, suspense, and emotional moments with strong performances, beautiful visuals, and heartfelt storytelling.",
+        "cast" : ["Kim Soo-hyun" , " Kim Ji-won"],
+        "genere" : ["Legal", "Drama"],
+        "watch_url" : "https://www.viki.com/tv/40466c-phantom-lawyer#episodes"
+    },
+    {
+        "name" : "Squid Game",
+        "id" : "squidGame",
+        "img_url" : "/squid_game.jpg",
+        "rating" : "8.8",
+        "description" : "Squid Game is a survival drama about a group of people who are forced to play a game of survival. The series combines survival drama, suspense, and emotional moments with strong performances, beautiful visuals, and heartfelt storytelling.",
+        "cast" : ["Kim Soo-hyun" , " Kim Ji-won"],
+        "genere" : ["Survival", "Drama"],
+        "watch_url" : "https://www.viki.com/tv/40466c-squid-game#episodes"
+    },
+    {
+        "name" : "Stranger Things",
+        "id" : "strangerThings",
+        "img_url" : "/stranger_things.jpg",
+        "rating" : "8.2",
+        "description" : "Stranger Things is a science fiction drama about a group of people who are sent to a remote island to investigate a mysterious signal. The series combines science fiction drama, suspense, and emotional moments with strong performances, beautiful visuals, and heartfelt storytelling.",
+        "cast" : ["Kim Soo-hyun" , " Kim Ji-won"],
+        "genere" : ["Science Fiction", "Drama"],
+        "watch_url" : "https://www.viki.com/tv/40466c-stranger-things#episodes"
+    }
+]
