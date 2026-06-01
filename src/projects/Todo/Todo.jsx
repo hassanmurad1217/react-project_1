@@ -1,11 +1,10 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./Todo.css";
-import { MdCheck, MdDeleteForever } from "react-icons/md";
 import { TodoForm } from "./TodoForm";
-
+import { TodoList } from "./TodoList";
+import { TodoDate } from "./TodoDate";
 export const Todo = () => {
   const [task, setTask] = useState([]);
-  const [DateTime, setDateTime] = useState("");
 
   const handleFormSubmit = (inputValue) => {
     // Empty input check
@@ -19,17 +18,6 @@ export const Todo = () => {
     // Add task
     setTask((prevTask) => [...prevTask, inputValue]);
   };
-
-  // Todo Date and Time
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const now = new Date();
-      const formattedDate = now.toLocaleDateString();
-      const formattedTime = now.toLocaleTimeString();
-      setDateTime(`${formattedDate} - ${formattedTime}`);
-    }, 1000);
-    return () => clearInterval(interval);
-  }, []);
 
   // Todo handleDeleteTodo function
   const handleDeleteTodo = (value) => {
@@ -47,7 +35,7 @@ export const Todo = () => {
       <section className="todo-container">
         <header>
           <h1>Todo List</h1>
-          <h2 className="date-time">{DateTime}</h2>
+          <TodoDate />
         </header>
 
         <TodoForm onAddTodo={handleFormSubmit} />
@@ -56,19 +44,11 @@ export const Todo = () => {
           <ul>
             {task.map((curTask, index) => {
               return (
-                <li key={index} className="todo-item">
-                  <span>{curTask}</span>
-                  <button className="check-btn">
-                    <MdCheck />
-                  </button>
-
-                  <button
-                    className="delete-btn"
-                    onClick={() => handleDeleteTodo(curTask)}
-                  >
-                    <MdDeleteForever />
-                  </button>
-                </li>
+                <TodoList
+                  key={index}
+                  data={curTask}
+                  onHandleDeleteTodo={handleDeleteTodo}
+                />
               );
             })}
           </ul>
