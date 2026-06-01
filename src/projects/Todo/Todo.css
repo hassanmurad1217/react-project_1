@@ -27,6 +27,7 @@ body {
   font-size: 4rem;
   font-weight: 700;
   margin-bottom: 2rem;
+  margin-left: 2rem;
 }
 
 /* Form Section */
@@ -136,4 +137,14 @@ body {
     text-align: center;
     margin-bottom: 2.5rem;
     color: white;
+  }
+  /* clear all tasks button */
+  .clear-all-tasks-btn {
+    background-color: #e74c3c;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 2rem;
   }

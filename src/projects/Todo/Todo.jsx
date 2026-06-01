@@ -1,22 +1,15 @@
 import { useEffect, useState } from "react";
 import "./Todo.css";
 import { MdCheck, MdDeleteForever } from "react-icons/md";
+import { TodoForm } from "./TodoForm";
 
 export const Todo = () => {
-  const [inputValue, setInputValue] = useState("");
   const [task, setTask] = useState([]);
   const [DateTime, setDateTime] = useState("");
 
-  const handleInputChange = (value) => {
-    setInputValue(value);
-  };
-
-  const handleFormSubmit = (event) => {
-    event.preventDefault();
-
+  const handleFormSubmit = (inputValue) => {
     // Empty input check
     if (!inputValue) {
-      setInputValue("");
       return;
     }
 
@@ -25,7 +18,6 @@ export const Todo = () => {
 
     // Add task
     setTask((prevTask) => [...prevTask, inputValue]);
-    setInputValue("");
   };
 
   // Todo Date and Time
@@ -39,6 +31,17 @@ export const Todo = () => {
     return () => clearInterval(interval);
   }, []);
 
+  // Todo handleDeleteTodo function
+  const handleDeleteTodo = (value) => {
+    const updatedTask = task.filter((curTask) => curTask !== value);
+    setTask(updatedTask);
+  };
+
+  // Todo handleClearTodoData function
+  const handleClearTodoData = () => {
+    setTask([]);
+  };
+
   return (
     <>
       <section className="todo-container">
@@ -47,25 +50,8 @@ export const Todo = () => {
           <h2 className="date-time">{DateTime}</h2>
         </header>
 
-        <section className="form">
-          <form onSubmit={handleFormSubmit}>
-            <div>
-              <input
-                type="text"
-                className="todo-input"
-                autoComplete="off"
-                value={inputValue}
-                onChange={(event) => handleInputChange(event.target.value)}
-              />
-            </div>
+        <TodoForm onAddTodo={handleFormSubmit} />
 
-            <div>
-              <button type="submit" className="todo-btn">
-                Add Task
-              </button>
-            </div>
-          </form>
-        </section>
         <section className="myUnorderedList">
           <ul>
             {task.map((curTask, index) => {
@@ -75,13 +61,22 @@ export const Todo = () => {
                   <button className="check-btn">
                     <MdCheck />
                   </button>
-                  <button className="delete-btn">
+
+                  <button
+                    className="delete-btn"
+                    onClick={() => handleDeleteTodo(curTask)}
+                  >
                     <MdDeleteForever />
                   </button>
                 </li>
               );
             })}
           </ul>
+        </section>
+        <section>
+          <button className="clear-all-tasks-btn" onClick={handleClearTodoData}>
+            Clear All Tasks
+          </button>
         </section>
       </section>
     </>
