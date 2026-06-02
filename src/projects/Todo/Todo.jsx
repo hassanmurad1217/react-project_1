@@ -3,50 +3,57 @@ import "./Todo.css";
 import { TodoForm } from "./TodoForm";
 import { TodoList } from "./TodoList";
 import { TodoDate } from "./TodoDate";
+
 export const Todo = () => {
   const [task, setTask] = useState([]);
 
+  // Methods used:
+  // - find(): checks if the same todo content already exists.
+  // - setTask() with spread (...): creates a new array and appends new todo.
   const handleFormSubmit = (inputValue) => {
     const { id, content, checked } = inputValue;
-    // Empty input check
     if (!content) {
       return;
     }
 
-    // Duplicate check
-    // if (task.includes(inputValue)) return;
     const ifTodoContentMatched = task.find(
-      (curTask) => curTask.content === content,
+      (currentTask) => currentTask.content === content,
     );
     if (ifTodoContentMatched) {
       return;
     }
 
-    // Add task
     setTask((prevTask) => [...prevTask, { id, content, checked }]);
   };
 
-  // Todo handleDeleteTodo function
+  // Method used:
+  // - filter(): returns a new array with all items except the one to remove.
   const handleDeleteTodo = (value) => {
-    const updatedTask = task.filter((curTask) => curTask.content !== value);
+    const updatedTask = task.filter(
+      (currentTask) => currentTask.content !== value,
+    );
     setTask(updatedTask);
   };
 
-  // Todo handleClearTodoData function
+  // Method used:
+  // - setTask([]): replaces current state with an empty array.
   const handleClearTodoData = () => {
     setTask([]);
   };
 
-  // Todo handleCheckTodo function
+  // Methods used:
+  // - map(): creates a new array by updating only the matched item.
+  // - spread (...): copies existing todo properties before changing checked.
   const handleCheckTodo = (value) => {
-    const updatedTask = task.map((curTask) => {
-      if (curTask.content === value) {
-        return { ...curTask, checked: !curTask.checked };
+    const updatedTask = task.map((currentTask) => {
+      if (currentTask.content === value) {
+        return { ...currentTask, checked: !currentTask.checked };
       }
-      return curTask;
+      return currentTask;
     });
     setTask(updatedTask);
-  }
+  };
+
   return (
     <>
       <section className="todo-container">
@@ -59,13 +66,13 @@ export const Todo = () => {
 
         <section className="myUnorderedList">
           <ul>
-            {task.map((curTask) => {
+            {task.map((currentTask) => {
               return (
                 <TodoList
-                  key={curTask.id}
-                  data={curTask.content}
+                  key={currentTask.id}
+                  data={currentTask.content}
                   onHandleDeleteTodo={handleDeleteTodo}
-                  checked={curTask.checked}
+                  checked={currentTask.checked}
                   onHandleCheckTodo={handleCheckTodo}
                 />
               );

@@ -1,5 +1,13 @@
 import { MdCheck, MdDeleteForever } from "react-icons/md";
-export const TodoList = ({ data, onHandleDeleteTodo , onHandleCheckTodo , checked }) => {
+
+export const TodoList = ({
+  data,
+  onHandleDeleteTodo,
+  onHandleCheckTodo,
+  checked,
+}) => {
+  // Method used:
+  // - onClick(): runs parent handler functions when buttons are clicked.
   return (
     <li className="todo-item">
       <span className={checked ? "checkList" : "notCheckList"}>{data}</span>
