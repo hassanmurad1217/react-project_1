@@ -148,3 +148,13 @@ body {
     cursor: pointer;
     margin: 2rem 0;
   }
+  /* check list */
+  .checkList {
+    text-decoration: line-through;
+  }
+  
+  .notCheckList {
+    text-decoration: none;
+  }
+  
+  

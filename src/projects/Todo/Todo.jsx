@@ -7,21 +7,28 @@ export const Todo = () => {
   const [task, setTask] = useState([]);
 
   const handleFormSubmit = (inputValue) => {
+    const { id, content, checked } = inputValue;
     // Empty input check
-    if (!inputValue) {
+    if (!content) {
       return;
     }
 
     // Duplicate check
-    if (task.includes(inputValue)) return;
+    // if (task.includes(inputValue)) return;
+    const ifTodoContentMatched = task.find(
+      (curTask) => curTask.content === content,
+    );
+    if (ifTodoContentMatched) {
+      return;
+    }
 
     // Add task
-    setTask((prevTask) => [...prevTask, inputValue]);
+    setTask((prevTask) => [...prevTask, { id, content, checked }]);
   };
 
   // Todo handleDeleteTodo function
   const handleDeleteTodo = (value) => {
-    const updatedTask = task.filter((curTask) => curTask !== value);
+    const updatedTask = task.filter((curTask) => curTask.content !== value);
     setTask(updatedTask);
   };
 
@@ -30,6 +37,16 @@ export const Todo = () => {
     setTask([]);
   };
 
+  // Todo handleCheckTodo function
+  const handleCheckTodo = (value) => {
+    const updatedTask = task.map((curTask) => {
+      if (curTask.content === value) {
+        return { ...curTask, checked: !curTask.checked };
+      }
+      return curTask;
+    });
+    setTask(updatedTask);
+  }
   return (
     <>
       <section className="todo-container">
@@ -42,12 +59,14 @@ export const Todo = () => {
 
         <section className="myUnorderedList">
           <ul>
-            {task.map((curTask, index) => {
+            {task.map((curTask) => {
               return (
                 <TodoList
-                  key={index}
-                  data={curTask}
+                  key={curTask.id}
+                  data={curTask.content}
                   onHandleDeleteTodo={handleDeleteTodo}
+                  checked={curTask.checked}
+                  onHandleCheckTodo={handleCheckTodo}
                 />
               );
             })}
