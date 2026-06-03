@@ -1,7 +1,11 @@
 import { useState } from "react";
 
 export const TodoForm = ({ onAddTodo }) => {
-  const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState({
+    id: "",
+    content: "",
+    checked: false,
+  });
 
   // Method used:
   // - setInputValue(): updates React state with latest text and default checked value.
