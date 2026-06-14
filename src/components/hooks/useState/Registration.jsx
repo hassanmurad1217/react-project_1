@@ -117,7 +117,7 @@ export const RegistrationForm = () => {
           </label>
 
           <input
-            type="phone"
+            type="tel"
             name="phone"
             placeholder="9876543211"
             required

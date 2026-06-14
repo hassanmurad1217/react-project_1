@@ -11,66 +11,102 @@ html {
   font-size: 62.5%;
 }
 
+/* IMPORTANT FIX: avoid flex centering on body */
 body {
   min-height: 100vh;
+  background-color: #f7f7f7;
+  display: block;
+  padding: 40px 15px;
+}
+
+/* CENTER WRAPPER (stable layout) */
+form {
   display: flex;
   justify-content: center;
-  align-items: center;
-  background-color: #f7f7f7;
 }
 
-/* FIXED CONTAINER */
+/* MAIN CONTAINER */
 .container {
   width: 500px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  background: white;
-  box-shadow: 2px 1px 21px -9px rgba(0, 0, 0, 0.38);
+  max-width: 100%;
+  padding: 25px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+  flex-direction: column;
 }
 
-/* Inputs */
+/* TITLE */
+h1 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  color: #1c2833;
+}
+
+p {
+  font-size: 1.6rem;
+  margin-bottom: 1.8rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* INPUTS */
 input[type="text"],
 input[type="email"],
 input[type="password"],
-input[type="phone"] {
+input[type="tel"] {
   width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  border: none;
-  background: #f7f7f7;
+  padding: 14px;
+  margin: 8px 0 18px 0;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #f9f9f9;
   font-size: 1.6rem;
-  border-radius: 6px;
+  transition: 0.2s ease;
 }
 
 input:focus {
-  background-color: #ddd;
   outline: none;
+  border-color: #0eb7f4;
+  background-color: #fff;
 }
 
-/* Button */
+/* BUTTON */
 button {
   background-color: #0eb7f4;
   color: white;
-  padding: 14px 20px;
+  padding: 14px;
   border: none;
   cursor: pointer;
   width: 100%;
   font-size: 1.6rem;
   border-radius: 10px;
-  transition: 0.2s ease;
+  transition: all 0.2s ease;
+  margin-top: 10px;
 }
 
 button:hover {
-  opacity: 0.9;
+  background-color: #0aa0d4;
 }
 
-/* Text */
-label,
-p {
+/* SUMMARY SECTION */
+.summary {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.summary p {
   font-size: 1.6rem;
+  color: #222;
 }
 
-p {
-  margin-bottom: 2rem;
+/* FIX: prevents layout shift when text updates */
+span {
+  font-weight: 600;
+  color: #0eb7f4;
+  display: inline-block;
+  min-width: 10px;
 }
