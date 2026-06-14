@@ -2,7 +2,8 @@
 // import "./components/Netflix.css";
 // import styles from "./components/Netflix.module.css";
 // import { Todo } from "./projects/Todo/Todo";
-import { Counter } from "./projects/challange/Counter";
+// import { Counter } from "./projects/challange/Counter";
+import ControlledForm from "./components/hooks/useState/ControlledForm";
 const App = () => {
   return (
     // <section className="container">
@@ -12,7 +13,8 @@ const App = () => {
 
     <section>
       {/* <Todo /> */}
-      <Counter />
+      {/* <Counter /> */}
+      <ControlledForm />
     </section>
   );
 };
