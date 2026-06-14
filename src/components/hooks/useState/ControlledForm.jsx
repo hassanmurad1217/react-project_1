@@ -18,7 +18,7 @@ const ControlledForm = () => {
 
   return (
     <section className="container state-container">
-      <h1>unControlled Component</h1>
+      <h1>Controlled Component</h1>
 
       <form onSubmit={handleSubmit}>
         <label>
