@@ -1,7 +1,8 @@
 // import NetflixSeries from "./components/NetflixSeries";
 // import "./components/Netflix.css";
 // import styles from "./components/Netflix.module.css";
-import { Todo } from "./projects/Todo/Todo";
+// import { Todo } from "./projects/Todo/Todo";
+import { Counter } from "./projects/challange/Counter";
 const App = () => {
   return (
     // <section className="container">
@@ -10,7 +11,8 @@ const App = () => {
     // </section>
 
     <section>
-      <Todo />
+      {/* <Todo /> */}
+      <Counter />
     </section>
   );
 };
