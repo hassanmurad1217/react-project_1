@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap");
+/* @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap");
 
 * {
   margin: 0;
@@ -9,24 +9,24 @@
 
 html {
   font-size: 62.5%;
-}
+} */
 
 /* IMPORTANT FIX: avoid flex centering on body */
-body {
+/* body {
   min-height: 100vh;
   background-color: #f7f7f7;
   display: block;
   padding: 40px 15px;
-}
+} */
 
 /* CENTER WRAPPER (stable layout) */
-form {
+/* form {
   display: flex;
   justify-content: center;
-}
+} */
 
 /* MAIN CONTAINER */
-.container {
+/* .container {
   width: 500px;
   max-width: 100%;
   padding: 25px;
@@ -37,24 +37,24 @@ form {
 
   display: flex;
   flex-direction: column;
-}
+} */
 
 /* TITLE */
-h1 {
+/* h1 {
   font-size: 2.4rem;
   margin-bottom: 1rem;
   color: #1c2833;
-}
+} */
 
-p {
+/* p {
   font-size: 1.6rem;
   margin-bottom: 1.8rem;
   color: #333;
   line-height: 1.5;
-}
+} */
 
 /* INPUTS */
-input[type="text"],
+/* input[type="text"],
 input[type="email"],
 input[type="password"],
 input[type="tel"] {
@@ -66,16 +66,16 @@ input[type="tel"] {
   background: #f9f9f9;
   font-size: 1.6rem;
   transition: 0.2s ease;
-}
+} */
 
-input:focus {
+/* input:focus {
   outline: none;
   border-color: #0eb7f4;
   background-color: #fff;
-}
+} */
 
 /* BUTTON */
-button {
+/* button {
   background-color: #0eb7f4;
   color: white;
   padding: 14px;
@@ -90,10 +90,10 @@ button {
 
 button:hover {
   background-color: #0aa0d4;
-}
+} */
 
 /* SUMMARY SECTION */
-.summary {
+/* .summary {
   margin-top: 30px;
   text-align: center;
 }
@@ -101,12 +101,132 @@ button:hover {
 .summary p {
   font-size: 1.6rem;
   color: #222;
-}
+} */
 
 /* FIX: prevents layout shift when text updates */
-span {
+/* span {
   font-weight: 600;
   color: #0eb7f4;
   display: inline-block;
   min-width: 10px;
+} */
+
+/* CSS for Contact Form */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #f7f7f7;
+  padding: 40px 15px;
+}
+
+/* MAIN CONTAINER */
+.container {
+  width: 500px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* CARD */
+.card {
+  background: #ffffff;
+  padding: 25px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* TITLE */
+h1 {
+  font-size: 2.8rem;
+  color: #1c2833;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* FORM */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* LABELS */
+label {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 0.6rem;
+}
+
+/* INPUTS + TEXTAREA */
+input[type="text"],
+input[type="password"],
+textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 1.8rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  font-size: 1.6rem;
+  transition: all 0.2s ease;
+}
+
+/* TEXTAREA */
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* FOCUS EFFECT */
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #0eb7f4;
+  background-color: #ffffff;
+}
+
+/* BUTTON */
+button {
+  background-color: #0eb7f4;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background-color: #0aa0d4;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .card {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  input,
+  textarea,
+  button {
+    font-size: 1.5rem;
+  }
 }
