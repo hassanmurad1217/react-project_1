@@ -5,7 +5,8 @@
 // import { Counter } from "./projects/challange/Counter";
 // import ControlledForm from "./components/hooks/useState/ControlledForm";
 // import { RegistrationForm } from "./components/hooks/useState/Registration";
-import { RegistrationFormReact } from "./components/hooks/useState/RegistrationReact";
+// import { RegistrationFormReact } from "./components/hooks/useState/RegistrationReact";
+import { LoginForm } from "./components/hooks/useState/LoginForm";
 const App = () => {
   return (
     // <section className="container">
@@ -18,7 +19,8 @@ const App = () => {
       {/* <Counter /> */}
       {/* <ControlledForm /> */}
       {/* <RegistrationForm /> */}
-      <RegistrationFormReact />
+      {/* <RegistrationFormReact /> */}
+      <LoginForm/>
     </section>
   );
 };
