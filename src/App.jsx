@@ -4,7 +4,8 @@
 // import { Todo } from "./projects/Todo/Todo";
 // import { Counter } from "./projects/challange/Counter";
 // import ControlledForm from "./components/hooks/useState/ControlledForm";
-import { RegistrationForm } from "./components/hooks/useState/Registration";
+// import { RegistrationForm } from "./components/hooks/useState/Registration";
+import { RegistrationFormReact } from "./components/hooks/useState/RegistrationReact";
 const App = () => {
   return (
     // <section className="container">
@@ -16,7 +17,8 @@ const App = () => {
       {/* <Todo /> */}
       {/* <Counter /> */}
       {/* <ControlledForm /> */}
-      <RegistrationForm />
+      {/* <RegistrationForm /> */}
+      <RegistrationFormReact />
     </section>
   );
 };
