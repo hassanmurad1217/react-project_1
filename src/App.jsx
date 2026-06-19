@@ -9,7 +9,8 @@
 // import { ContactForm } from "./components/hooks/useState/ContactForm";
 // import { LoginForm } from "./components/hooks/useState/LoginForm";
 // import { ReactUseEffect } from "./components/hooks/useEffect";
-import { Challenge } from "./components/hooks/useEffect/EffectChallenge";
+// import { Challenge } from "./components/hooks/useEffect/EffectChallenge";
+// import { CleanUp } from "./components/hooks/useEffect/CleanUp";
 
 const App = () => {
   return (
@@ -27,7 +28,8 @@ const App = () => {
       {/* <LoginForm/> */}
       {/* <ContactForm /> */}
       {/* <ReactUseEffect /> */}
-      <Challenge />
+      {/* <Challenge /> */}
+      {/* <CleanUp /> */}
     </section>
   );
 };
