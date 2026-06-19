@@ -6,8 +6,8 @@ export const Challenge = () => {
   const [name, setName] = useState("");
 
   useEffect(() => {
-    console.log(`My name is ${name}`);
-  });
+    console.log(`${name}`);
+  }, [name]);
   useEffect(() => {
     document.title = `Count : ${count}`;
   }, [count]);
