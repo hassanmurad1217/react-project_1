@@ -6,10 +6,11 @@
 // import ControlledForm from "./components/hooks/useState/ControlledForm";
 // import { RegistrationForm } from "./components/hooks/useState/Registration";
 // import { RegistrationFormReact } from "./components/hooks/useState/RegistrationReact";
-
-import { ContactForm } from "./components/hooks/useState/ContactForm";
-
+// import { ContactForm } from "./components/hooks/useState/ContactForm";
 // import { LoginForm } from "./components/hooks/useState/LoginForm";
+// import { ReactUseEffect } from "./components/hooks/useEffect";
+import { Challenge } from "./components/hooks/useEffect/EffectChallenge";
+
 const App = () => {
   return (
     // <section className="container">
@@ -24,7 +25,9 @@ const App = () => {
       {/* <RegistrationForm /> */}
       {/* <RegistrationFormReact /> */}
       {/* <LoginForm/> */}
-      <ContactForm />
+      {/* <ContactForm /> */}
+      {/* <ReactUseEffect /> */}
+      <Challenge />
     </section>
   );
 };
