@@ -12,6 +12,8 @@
 // import { Challenge } from "./components/hooks/useEffect/EffectChallenge";
 // import { CleanUp } from "./components/hooks/useEffect/CleanUp";
 
+import { HowToFetchApi } from "./components/hooks/useEffect/HowToFetchApi";
+
 const App = () => {
   return (
     // <section className="container">
@@ -30,6 +32,7 @@ const App = () => {
       {/* <ReactUseEffect /> */}
       {/* <Challenge /> */}
       {/* <CleanUp /> */}
+      <HowToFetchApi />
     </section>
   );
 };
