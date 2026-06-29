@@ -8,22 +8,23 @@ export const HowToFetchApi = () => {
 
   const API = "https://pokeapi.co/api/v2/pokemon/pikachu";
 
-  const fetchPokemon = () => {
-    fetch(API)
-      .then((response) => response.json())
-      .then((data) => {
-        setPokemon(data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.log(error);
-        setError(error);
-        setLoading(false);
-      });
+  const fetchPokemon = async () => {
+    try {
+      const response = await fetch(API);
+      const data = await response.json();
+      setPokemon(data);
+      setLoading(false);
+    } catch (error) {
+      console.log(error);
+      setError(error);
+      setLoading(false);
+    }
   };
 
   useEffect(() => {
-    fetchPokemon();
+    (async () => {
+      await fetchPokemon();
+    })();
   }, []);
 
   console.log(pokemon);
@@ -42,7 +43,6 @@ export const HowToFetchApi = () => {
       </div>
     );
 
-  //   if (pokemon) {
   return (
     <section className="container">
       <header>
@@ -74,4 +74,3 @@ export const HowToFetchApi = () => {
     </section>
   );
 };
-// };
