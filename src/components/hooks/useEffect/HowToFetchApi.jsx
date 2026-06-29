@@ -3,17 +3,22 @@ import "./Pokemon.css";
 
 export const HowToFetchApi = () => {
   const [pokemon, setPokemon] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   const API = "https://pokeapi.co/api/v2/pokemon/pikachu";
 
   const fetchPokemon = () => {
     fetch(API)
-      .then((response) => response.json()) // <-- Fix here!
+      .then((response) => response.json())
       .then((data) => {
         setPokemon(data);
+        setLoading(false);
       })
       .catch((error) => {
-        console.error("Error fetching Pokemon:", error);
+        console.log(error);
+        setError(error);
+        setLoading(false);
       });
   };
 
@@ -23,10 +28,17 @@ export const HowToFetchApi = () => {
 
   console.log(pokemon);
 
-  if (!pokemon)
+  if (loading)
     return (
       <div>
         <h1>Loading...</h1>
+      </div>
+    );
+
+  if (error)
+    return (
+      <div>
+        <h1>Error: {error.message}</h1>
       </div>
     );
 
@@ -46,6 +58,17 @@ export const HowToFetchApi = () => {
             />
           </figure>
           <h1>{pokemon.name}</h1>
+          <div className="grid-three-cols">
+            <p className="pokemon-info">
+              Height: <span> {pokemon.height} </span>
+            </p>
+            <p className="pokemon-info">
+              Weight: <span> {pokemon.weight}</span>
+            </p>
+            <p className="pokemon-info">
+              speed: <span>{pokemon.stats[5].base_stat}</span>
+            </p>
+          </div>
         </li>
       </ul>
     </section>
