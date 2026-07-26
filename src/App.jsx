@@ -15,6 +15,8 @@
 // import { UseRef } from "./components/hooks/useRefs";
 // import { ForwardRef } from "./components/hooks/useRefs/ForwardRef";
 
+import { UseId } from "./components/hooks/UseID";
+
 const App = () => {
   return (
     // <section className="container">
@@ -36,6 +38,7 @@ const App = () => {
       {/* <HowToFetchApi /> */}
       {/* <UseRef/> */}
       {/* <ForwardRef /> */}
+      <UseId />
     </section>
   );
 };
