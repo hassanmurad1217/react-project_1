@@ -11,8 +11,9 @@
 // import { ReactUseEffect } from "./components/hooks/useEffect";
 // import { Challenge } from "./components/hooks/useEffect/EffectChallenge";
 // import { CleanUp } from "./components/hooks/useEffect/CleanUp";
+// import { HowToFetchApi } from "./components/hooks/useEffect/HowToFetchApi";
+// import { UseRef } from "./components/hooks/useRefs";
 
-import { HowToFetchApi } from "./components/hooks/useEffect/HowToFetchApi";
 
 const App = () => {
   return (
@@ -32,7 +33,8 @@ const App = () => {
       {/* <ReactUseEffect /> */}
       {/* <Challenge /> */}
       {/* <CleanUp /> */}
-      <HowToFetchApi />
+      {/* <HowToFetchApi /> */}
+      {/* <UseRef/> */}
     </section>
   );
 };
