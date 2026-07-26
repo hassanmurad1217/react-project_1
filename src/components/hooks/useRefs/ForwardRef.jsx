@@ -1,11 +1,12 @@
-import { forwardRef, useId, useRef } from "react";
-
+import { useId, useRef } from "react";
+import "./index.css";
 export const ForwardRef = () => {
   const username = useRef(null);
   const password = useRef(null);
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
+    console.log(username.current.value, password.current.value);
   };
 
   return (
@@ -16,13 +17,24 @@ export const ForwardRef = () => {
   );
 };
 
-const BeforeReact19Input = forwardRef((props, ref) => {
+// const BeforeReact19Input = forwardRef((props, ref) => {
+//   const id = useId();
+//   return (
+//     <>
+//       <label htmlFor={id}>{props.lable}</label>
+//       <input type="text" ref={ref} />
+//       <button>Submit</button>
+//     </>
+//   );
+// });
+
+const BeforeReact19Input = ({ lable, ref }) => {
   const id = useId();
   return (
     <>
-      <label htmlFor={id}>{props.lable}</label>
+      <label htmlFor={id}>{lable}</label>
       <input type="text" ref={ref} />
       <button>Submit</button>
     </>
   );
-});
+};
