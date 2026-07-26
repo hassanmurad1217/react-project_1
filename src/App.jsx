@@ -13,8 +13,7 @@
 // import { CleanUp } from "./components/hooks/useEffect/CleanUp";
 // import { HowToFetchApi } from "./components/hooks/useEffect/HowToFetchApi";
 // import { UseRef } from "./components/hooks/useRefs";
-
-import { ForwardRef } from "./components/hooks/useRefs/ForwardRef";
+// import { ForwardRef } from "./components/hooks/useRefs/ForwardRef";
 
 const App = () => {
   return (
@@ -36,7 +35,7 @@ const App = () => {
       {/* <CleanUp /> */}
       {/* <HowToFetchApi /> */}
       {/* <UseRef/> */}
-      <ForwardRef />
+      {/* <ForwardRef /> */}
     </section>
   );
 };

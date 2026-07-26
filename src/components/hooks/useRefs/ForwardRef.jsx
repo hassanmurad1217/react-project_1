@@ -33,7 +33,7 @@ const BeforeReact19Input = ({ lable, ref }) => {
   return (
     <>
       <label htmlFor={id}>{lable}</label>
-      <input type="text" ref={ref} />
+      <input id={id} type="text" ref={ref} />
       <button>Submit</button>
     </>
   );
