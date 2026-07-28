@@ -16,8 +16,8 @@
 // import { ForwardRef } from "./components/hooks/useRefs/ForwardRef";
 // import { UseId } from "./components/hooks/UseID";
 
-import { BioProvider } from "./components/hooks/ContextApi";
 // import { About } from "./components/hooks/ContextApi/About";
+import { BioProvider } from "./components/hooks/ContextApi";
 import { Home } from "./components/hooks/ContextApi/Home";
 
 const App = () => {
